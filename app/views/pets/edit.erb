@@ -2,7 +2,7 @@
 <form action="/pets" method="post">
   <input id="hidden" type="hidden" name="_method" value="patch">
   <label>Name:</label>
-  <input id="pet_name" type="text" name="pet[name]"><%= %></input>
+  <input id="pet_name" type="text" name="pet[name]"><%= @pet.name %></input>
   <br>
   <label>Owners:</label>
   <% @owners.each do |owner|%>
