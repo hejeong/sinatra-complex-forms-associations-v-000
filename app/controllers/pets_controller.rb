@@ -25,11 +25,12 @@ class PetsController < ApplicationController
   end
 
   post '/pets/:id' do
-
+    
     redirect to "pets/#{@pet.id}"
   end
 
   get '/pets/:id/edit' do
+    @pet = Pet.find_by(params[:id])
     erb :edit
   end
 end
