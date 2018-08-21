@@ -31,6 +31,6 @@ class PetsController < ApplicationController
 
   get '/pets/:id/edit' do
     @pet = Pet.find_by(params[:id])
-    erb :edit
+    erb :'pets/edit'
   end
 end
