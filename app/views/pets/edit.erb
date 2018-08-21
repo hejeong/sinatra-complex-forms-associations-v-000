@@ -5,7 +5,7 @@
   <input id="pet_name" type="text" name="pet[name]"><%= @pet.name %></input>
   <br>
   <label>Owners:</label>
-  <% @owners.each do |owner|%>
+  <% Owner.all.each do |owner|%>
     <input id="<%= owner.id %>" type="checkbox" name="pet[owner_id]" value="<%= owner.id %>"><%= owner.name %></input>
   <% end %>
   <br>
